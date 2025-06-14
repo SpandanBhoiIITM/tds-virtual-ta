@@ -3,7 +3,7 @@ description: "Evaluation for TDS Virtual TA"
 providers:
   - id: tds-virtual-ta
     config:
-      url: "http://127.0.0.1:8000/ask"  # Replace with your deployed API URL if hosted
+      url: " https://tds-virtual-ta2.onrender.com/docs"  
       method: POST
       headers:
         Content-Type: application/json
