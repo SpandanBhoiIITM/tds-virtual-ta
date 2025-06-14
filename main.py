@@ -6,7 +6,7 @@ from rag_utils import get_top_k_relevant_context
 app = FastAPI()
 
 class QueryInput(BaseModel):
-    query: str
+    question: str
 
 @app.get("/")
 def root():
