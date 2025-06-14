@@ -14,7 +14,7 @@ def root():
 
 @app.post("/ask")
 async def ask_qn(input: QueryInput):
-    relevant_context = get_top_k_relevant_context(input.query)
-    prompt = f"Context:\n{relevant_context}\n\nQuestion: {input.query}\nAnswer:"
+    relevant_context = get_top_k_relevant_context(input.question)
+    prompt = f"Context:\n{relevant_context}\n\nQuestion: {input.question}\nAnswer:"
     answer = call_deepseek(prompt)
     return {"answer": answer}
