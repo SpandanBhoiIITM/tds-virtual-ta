@@ -18,7 +18,7 @@ app.add_middleware(
 class QueryInput(BaseModel):
     question: str
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "POST"])
 def root():
     return {"message": "TDS Virtual TA backend is running."}
 
