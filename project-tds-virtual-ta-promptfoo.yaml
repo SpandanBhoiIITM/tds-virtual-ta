@@ -1,0 +1,26 @@
+description: "Evaluation for TDS Virtual TA"
+
+providers:
+  - id: tds-virtual-ta
+    config:
+      url: "http://127.0.0.1:8000/ask"  # Replace with your deployed API URL if hosted
+      method: POST
+      headers:
+        Content-Type: application/json
+      body: |
+        {
+          "query": "{{prompt}}"
+        }
+
+prompts:
+  - prompt: "What is the difference between supervised and unsupervised learning?"
+    expected: "Supervised learning uses labeled data, unsupervised does not."
+
+  - prompt: "Explain overfitting in machine learning."
+    expected: "Overfitting means the model performs well on training data but poorly on unseen data."
+
+  - prompt: "What is a confusion matrix?"
+    expected: "It is a performance measurement for classification problems."
+
+evals:
+  - metric: accuracy
