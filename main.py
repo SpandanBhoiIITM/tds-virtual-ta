@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from deepseek_client import call_deepseek
 from rag_utils import get_top_k_relevant_context
-from rag_utils import get_top_k_relevant_context
+from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI()
