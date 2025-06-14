@@ -4,3 +4,5 @@ scikit-learn
 selenium
 chromedriver-autoinstaller
 requests
+openai
+python-dotenv
